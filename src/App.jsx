@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Header from "./components/Header"
 import Dashboard from "./pages/dashboard/Dashboard"
 import Settings from "./pages/Settings"
+import MyFavorites from "./pages/MyFavorites"
 
 
 
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Dashboard />} />
 
         <Route path="/settings" element={<Settings />} />
+        <Route path="/favorites" element={<MyFavorites />} />
       </Routes>
 
     </div>

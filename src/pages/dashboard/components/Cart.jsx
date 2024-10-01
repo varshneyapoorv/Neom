@@ -1,70 +1,71 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';  // Core styles
-import 'swiper/css/navigation';  // If using navigation
-import 'swiper/css/pagination';  // If using pagination
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // Core styles
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import "swiper/css/navigation";
+import "swiper/css/pagination"
 
 
-// Import Swiper styles
-import 'swiper/css';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+
 
 const cardData = [
+    // {
+    //   isWishlisted: true,
+    //   imageUrl: "src/assets/img/golf.jpg",
+    //   category: "Invigorating & Uplifting",
+    //   title: "Round of Golf",
+    //   dateRange: "Nov 10-29",
+    //   time: "10:30 AM - 7:30 PM",
+    //   eventNumber: 1
+    // },
+    // {
+    //   isWishlisted: true,
+    //   imageUrl: "src/assets/img/music.jpg",
+    //   category: "Relaxing & Fun",
+    //   title: "Music Concert",
+    //   dateRange: "Nov 15",
+    //   time: "6:00 PM - 9:00 PM",
+    //   eventNumber: 2
+    // },
+    // {
+    //   isWishlisted: true,
+    //   imageUrl: "src/assets/img/yoga.jpg",
+    //   category: "Health & Wellness",
+    //   title: "Morning Yoga",
+    //   dateRange: "Nov 12-14",
+    //   time: "7:00 AM - 8:00 AM",
+    //   eventNumber: 3
+    // },
     {
-      isWishlisted: true,
-      imageUrl: "src/assets/img/golf.jpg",
-      category: "Invigorating & Uplifting",
-      title: "Round of Golf",
-      dateRange: "Nov 10-29",
-      time: "10:30 AM - 7:30 PM",
-      eventNumber: 1
+        isWishlisted: true,
+        imageUrl: "src/assets/img/art.jpg",
+        category: "Creative & Artsy",
+        title: "Art Workshop",
+        dateRange: "Nov 18-20",
+        time: "1:00 PM - 3:00 PM",
+        eventNumber: 4
     },
     {
-      isWishlisted: true,
-      imageUrl: "src/assets/img/music.jpg",
-      category: "Relaxing & Fun",
-      title: "Music Concert",
-      dateRange: "Nov 15",
-      time: "6:00 PM - 9:00 PM",
-      eventNumber: 2
-    },
-    {
-      isWishlisted: true,
-      imageUrl: "src/assets/img/yoga.jpg",
-      category: "Health & Wellness",
-      title: "Morning Yoga",
-      dateRange: "Nov 12-14",
-      time: "7:00 AM - 8:00 AM",
-      eventNumber: 3
-    },
-    {
-      isWishlisted: true,
-      imageUrl: "src/assets/img/art.jpg",
-      category: "Creative & Artsy",
-      title: "Art Workshop",
-      dateRange: "Nov 18-20",
-      time: "1:00 PM - 3:00 PM",
-      eventNumber: 4
-    },
-    {
-      isWishlisted: true,
-      imageUrl: "src/assets/img/cooking.jpg",
-      category: "Culinary & Tasty",
-      title: "Cooking Class",
-      dateRange: "Nov 22",
-      time: "4:00 PM - 6:00 PM",
-      eventNumber: 5
+        isWishlisted: true,
+        imageUrl: "src/assets/img/cooking.jpg",
+        category: "Culinary & Tasty",
+        title: "Cooking Class",
+        dateRange: "Nov 22",
+        time: "4:00 PM - 6:00 PM",
+        eventNumber: 5
     }
-  ]
+]
 
 
 
 
-const Cart = ( {item}) => {
+const Cart = ({ item }) => {
     console.log("data", item);
     // console.log(title)
 
     return (
-        <div className="max-w-2xl ms-11 mx-auto bg-white rounded-lg shadow-lg border border-gray-300 mt-8">
+        <div className="flex h-72 aspect-[25/10] gap-4 ml-12 bg-white rounded-lg shadow-lg border border-gray-300 mt-8">
             {/* Container */}
             <div className="flex">
                 {/* Image Section */}
@@ -137,36 +138,30 @@ const Cart = ( {item}) => {
                     </div>
                 </div>
             </div>
+
         </div>
+
+
+
     )
 }
-
 
 const Slider = () => {
     return (
-        <Swiper
-
-        spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-        navigation={true}
-        loop={true}
-        pagination={{
-            clickable:true
-        }}
-        grabCursor={true}
-        modules={[Pagination,Autoplay,Navigation]}
-
-    >
-        {cardData.map((item, index) => (
-            <SwiperSlide key={index}>
+        <>
+        <div className="flex  items-center">
+            {cardData.map((item, index) => (
                 <Cart key={index} item={item} />
-            </SwiperSlide>
-        ))}
-    </Swiper>
-    )
-}
-
+            ))}
+            {/* Optional navigation icons (without functionality) */}
+            
+        </div>
+        <div className="flex ml-14 space-x-4 mt-4">
+                <FaArrowLeft className="text-pink-500 w-8 h-8 cursor-pointer" />
+                <FaArrowRight className="text-pink-500 w-8 h-8 cursor-pointer" />
+            </div>
+        </>
+    );
+};
 
 export default Slider;
