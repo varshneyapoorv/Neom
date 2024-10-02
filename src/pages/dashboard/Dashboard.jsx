@@ -11,84 +11,88 @@ const Dashboard = () => {
         <Slider />
       
 
-        <div >
-          <h2 className="text-black ml-10 mt-10 text-4xl">Charlie, hope we understand you better</h2>
-          <div className="flex mt-10 ml-10 mr-20 gap-4">
-            <div className="max-w-lg mx-auto h-auto bg-white rounded-lg shadow-lg overflow-hidden">
-              {/* Image section */}
-              <div className="relative">
-                <img
-                  className="w-full h-48 object-cover"
-                  src="src/assets/img/cusine_0.png"
-                  alt="Epicurean Cuisine"
-                />
-                {/* Emoji Icon */}
-                <div className="absolute top-4 left-4 bg-orange-200 rounded-full p-2">
-                  <span className="text-2xl">😕</span>
-                </div>
-              </div>
+        <div className="ml-10 mt-10 mr-20">
+      {/* Header */}
+      <h2 className="text-black text-4xl mb-10">Charlie, hope we understand you better</h2>
 
-              {/* Content Section */}
-              <div className="p-6">
-                {/* Title and Date */}
-                <h3 className="text-lg font-semibold">Indulge in the Finest Epicurean Cuisines</h3>
-                <p className="text-gray-500 text-sm mt-1">on Nov 17, 2022</p>
-
-                {/* Message */}
-                <p className="mt-4 text-gray-700">
-                  Hi Charlie, we came to know from our chef John that you didn’t enjoy the Epicurean
-                  cuisines yesterday. As a compensation, we would like to offer you a free Italian cuisine
-                  as a goodwill gesture. Would you like to accept our request?
-                </p>
-
-                {/* Buttons */}
-                <div className="flex justify-between items-center mt-6">
-                  <button className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">
-                    Yes, I accept
-                  </button>
-                  <button className="text-gray-600 hover:underline">No, thanks</button>
-                </div>
-              </div>
-            </div>
-            <div className="max-w-lg mx-auto h-auto bg-white rounded-lg shadow-lg overflow-hidden">
-              {/* Image section */}
-              <div className="relative">
-                <img
-                  className="w-full h-48 object-cover"
-                  src="src\assets/img/cusine_0.png"
-                  alt="Epicurean Cuisine"
-                />
-                {/* Emoji Icon */}
-                <div className="absolute top-4 left-4 bg-orange-200 rounded-full p-2">
-                  <span className="text-2xl">😕</span>
-                </div>
-              </div>
-
-              {/* Content Section */}
-              <div className="p-6">
-                {/* Title and Date */}
-                <h3 className="text-lg font-semibold">Indulge in the Finest Epicurean Cuisines</h3>
-                <p className="text-gray-500 text-sm mt-1">on Nov 17, 2022</p>
-
-                {/* Message */}
-                <p className="mt-4 text-gray-700">
-                  Hi Charlie, we came to know from our chef John that you didn’t enjoy the Epicurean
-                  cuisines yesterday. As a compensation, we would like to offer you a free Italian cuisine
-                  as a goodwill gesture. Would you like to accept our request?
-                </p>
-
-                {/* Buttons */}
-                <div className="flex justify-between items-center mt-6">
-                  <button className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">
-                    Yes, I accept
-                  </button>
-                  <button className="text-gray-600 hover:underline">No, thanks</button>
-                </div>
-              </div>
+      <div className="flex gap-4">
+        {/* Feedback Card */}
+        <div className="max-w-lg bg-white rounded-lg shadow-lg overflow-hidden">
+          {/* Image section */}
+          <div className="relative">
+            <img
+              className="w-full h-64 object-cover rounded-lg"
+              src="src/assets/img/cusine_0.png"
+              alt="Epicurean Cuisine"
+            />
+            {/* Emoji Icon */}
+            <div className="absolute top-4 left-4 bg-orange-200 rounded-full p-2">
+              <span className="text-2xl">😕</span>
             </div>
           </div>
 
+          {/* Content Section */}
+          <div className="p-6 text-left">
+            {/* Title and Date */}
+            <h3 className="text-lg font-semibold">Indulge in the Finest Epicurean Cuisines</h3>
+            <p className="text-gray-500 text-sm mt-1">on Nov 17, 2022</p>
+
+            {/* Message */}
+            <p className="mt-4 text-gray-700">
+              Hi Charlie, we came to know from our chef John that you didn’t enjoy the Epicurean
+              cuisines yesterday. As a compensation, we would like to offer you a free Italian cuisine
+              as a goodwill gesture. Would you like to accept our request?
+            </p>
+
+            {/* Buttons */}
+            <div className="flex justify-between items-center mt-6">
+              <button className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">
+                Yes, I accept
+              </button>
+              <button className="text-gray-600 hover:underline">No, thanks</button>
+            </div>
+          </div>
         </div>
+
+        {/* Duplicate Feedback Card (If you need multiple cards) */}
+        <div className="max-w-lg bg-white rounded-lg shadow-lg overflow-hidden">
+          {/* Image section */}
+          <div className="relative">
+            <img
+              className="w-full h-48 object-cover"
+              src="src/assets/img/cusine_0.png"
+              alt="Epicurean Cuisine"
+            />
+            {/* Emoji Icon */}
+            <div className="absolute top-4 left-4 bg-orange-200 rounded-full p-2">
+              <span className="text-2xl">😕</span>
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="p-6">
+            {/* Title and Date */}
+            <h3 className="text-lg font-semibold">Indulge in the Finest Epicurean Cuisines</h3>
+            <p className="text-gray-500 text-sm mt-1">on Nov 17, 2022</p>
+
+            {/* Message */}
+            <p className="mt-4 text-gray-700">
+              Hi Charlie, we came to know from our chef John that you didn’t enjoy the Epicurean
+              cuisines yesterday. As a compensation, we would like to offer you a free Italian cuisine
+              as a goodwill gesture. Would you like to accept our request?
+            </p>
+
+            {/* Buttons */}
+            <div className="flex justify-between items-center mt-6">
+              <button className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">
+                Yes, I accept
+              </button>
+              <button className="text-gray-600 hover:underline">No, thanks</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
         <div>
           <h2 className="text-black ml-10 mt-10 text-4xl">Today recommendations for you, Charlie!</h2>
           <div className="flex mt-10 ml-10 mr-20 gap-4">

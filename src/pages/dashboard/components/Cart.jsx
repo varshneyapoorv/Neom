@@ -1,7 +1,4 @@
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Core styles
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "swiper/css/navigation";
 import "swiper/css/pagination"
